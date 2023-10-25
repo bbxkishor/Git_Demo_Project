@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [suite1]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="org.uncommons.reportng.AnnotationTransformer"/>
+    <listener class-name="org.uncommons.reportng.FixRetryListener"/>
+  </listeners>
+  <test name="winAppDriverFramework(failed)">
+    <classes>
+      <class name="tests.Firstphase">
+        <methods>
+          <include name="Test24_AI0033_Password_alphaNumeric"/>
+          <include name="Test22_AI0025a_Password_Charac_Limit"/>
+          <include name="Test18_DC0001_Connection_of_ZeroUTx"/>
+          <include name="Test02_CL0001_bxa_Manager_IP_Check"/>
+          <include name="Test19_SR0005_connection_Termination_After_privateCon"/>
+          <include name="Test08_AI0046_Version_BB_details_check"/>
+          <include name="Test11_AI0007_Connection_List_check"/>
+          <include name="Test07_AI0004_Menu_Options_Check"/>
+          <include name="DeleteConnection"/>
+          <include name="Test04_CL0003_Active_User_check"/>
+          <include name="Test01_SR0018_HID_Absolute"/>
+          <include name="Test09_AI0047_Information_Tab"/>
+          <include name="Test16_DC0001_Connection_of_SETX"/>
+          <include name="Test17_DC0001_Connection_of_PETX"/>
+          <include name="Test20_AI0038_Close_RA_Closes_AllCon"/>
+          <include name="logout"/>
+          <include name="Test05_SR0021_RA_Authentication"/>
+          <include name="Test13_AI0032_User_Password_Update"/>
+          <include name="Test15_CL0006a_Active_multipleCon_windows"/>
+          <include name="closeoff"/>
+          <include name="Test03_CL0002_bxaManager_IPsetUp"/>
+          <include name="Test21_AI0048_Launch_Terminate_PopUp_Message"/>
+          <include name="Test10_VI0006_Resolution_Setto_Auto"/>
+          <include name="Test12_AI0005_User_Privileges_Check"/>
+          <include name="Test14_AI0043_Select_Connection"/>
+          <include name="Test23_AI0025a_AD_Password_Charac_Limit"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- tests.Firstphase -->
+      <class name="tests.FourthPhase">
+        <methods>
+          <include name="Test09_IO0001_4k_optimised_private_connection_launch"/>
+          <include name="logout"/>
+          <include name="Test03_AI0061_RA_login_with_DemoMode"/>
+          <include name="Test19__Statusinfo_of_connection_after_rebooting_Tx"/>
+          <include name="Test11_CP0001_copy_English_char_from_PC_paste_inConnection"/>
+          <include name="Test12_CP0005_copy_ASCII_from_PC_paste_inConnection"/>
+          <include name="Test13_CP0001_Data_Notcopied_from_one_connection_to_another"/>
+          <include name="Test18_SE_SH_Performance_Check_FPS_DF_Mbps"/>
+          <include name="Test08_IO0002_4k_optimised_shared_connection_launch"/>
+          <include name="closeoff"/>
+          <include name="Test06_CNTL_ALT_END_should_work_for_transmitter"/>
+          <include name="Test14_CP0006_max_copy_255_Char_from_PC_paste_inConnection"/>
+          <include name="Test04_SR0019_Connection_launch_in_3sec"/>
+          <include name="Test05_SR0020a_Concurrent_8connections_by_RA"/>
+          <include name="Test07_LoginRA_by_VIP_of_cluster"/>
+          <include name="Test10_AI0002_Verifying_BlackBox_logo_inRA"/>
+          <include name="DeleteConnection"/>
+          <include name="Test16_SR0044_CNTL_ALT_DEL_should_work_for_Local_PC"/>
+          <include name="Test01_SR0039_Launch_VM_con_with_ADuser"/>
+          <include name="Test15_CP00013_VM_should_allow_more_than_255_characters"/>
+          <include name="Test17_PE_SH_Performance_Check_FPS_DF_Mbps"/>
+          <include name="Test02_AI0073_Mouse_movement_on_multiple_connections"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- tests.FourthPhase -->
+      <class name="tests.Thirdstage">
+        <methods>
+          <include name="Test07_AI0036_RDP_Resolution"/>
+          <include name="logout"/>
+          <include name="Test11_AI0050_Con_Navigation_from_Keyboard"/>
+          <include name="Test05_VI0007_SmartSizing_VM_launch"/>
+          <include name="Test08_VI0010_resolution_1920X1080_with_40fps"/>
+          <include name="closeoff"/>
+          <include name="Test02_SR0024_Logout_from_VM"/>
+          <include name="Test14_SR0023_close_connection"/>
+          <include name="Test03__PE_DH_Performance_Check_FPS_DF_Mbps"/>
+          <include name="Test10_AI0020_Connection_in_AlphabeticalOrder"/>
+          <include name="Test06_SR0025_Reboot_Tx"/>
+          <include name="Test09_CL0005a_RA_License_check"/>
+          <include name="Test15_US0001_MouseMovement_inVM"/>
+          <include name="Test04_SR0001_Con_Launch_in_RAandRX"/>
+          <include name="DeleteConnection"/>
+          <include name="Test16_SR0026_Networkloss_should_terminateConnec"/>
+          <include name="Test01_SR0018_No_Extended_Desktop"/>
+          <include name="Test13_CL0007_Key_mouse_MoveonActiveconnection"/>
+          <include name="Test12_AI0028_AD_User_LaunchConnection"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- tests.Thirdstage -->
+      <class name="tests.SecondPhase">
+        <methods>
+          <include name="Test_12_SR0010_Mouse_Movement_For_Second_user"/>
+          <include name="Test10_AI0075_Maximize_connection"/>
+          <include name="logout"/>
+          <include name="Test17_DC0005_PE_Connection_in_Optimised_mode"/>
+          <include name="closeoff"/>
+          <include name="Test03_SR0013_Connection_active_for_last_user"/>
+          <include name="Test05_FPS_Performance_in_RA_and_RX"/>
+          <include name="Test02_AI0052_Wrong_IP_Connection_in_RA"/>
+          <include name="Test09_AI0074_Minimize_connection"/>
+          <include name="Test_08_DC0003_PE_Dual_Extended_Desktop"/>
+          <include name="Test13_CL0005_RA_doesnot_support_4K"/>
+          <include name="Test01_DC0002_SE_Extended_Desktop"/>
+          <include name="Test_07_SR0004_Private_Violation"/>
+          <include name="Test04_AI0050_Double_click_Connection"/>
+          <include name="Test14_SR0001_TX_VM_parallel_connectioninRA"/>
+          <include name="Test16_AI0052_Connecting_disconnected_TX"/>
+          <include name="DeleteConnection"/>
+          <include name="Test06_SR0015_Performance_in_Private_and_Shared_Con"/>
+          <include name="Test_11_VI0005_CreateVMlaunch_with_Auto"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- tests.SecondPhase -->
+    </classes>
+  </test> <!-- winAppDriverFramework(failed) -->
+</suite> <!-- Failed suite [suite1] -->

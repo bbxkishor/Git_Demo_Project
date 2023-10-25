@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="suite1" verbose="1">
+
+	<listeners>
+		<!-- <listener class-name="org.bbox.reports.ListenersImplementation" /> -->
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="org.uncommons.reportng.AnnotationTransformer" />
+		<listener class-name="org.uncommons.reportng.FixRetryListener" />
+	</listeners>
+
+
+
+	<test name="winAppDriverFramework">
+
+		<classes> 
+			
+			 
+			<class name="tests.SecondPhase" />
+			<class name="tests.Firstphase" />
+	<class name="tests.Thirdstage" />
+			<class name="tests.FourthPhase" /> 
+			<class name="tests.SixthPhase" />
+			 <class name="tests.FifthPhase" /> 
+			  
+		</classes>
+	</test>
+</suite> 
