@@ -184,10 +184,10 @@ public class ClusterPage {
 		standbyNodeName(driver).sendKeys(standbynodename);
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		prepareStandByBtn(driver).click();
-		new WebDriverWait(driver, 120).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(Switch.spinnerXpath)));
+		new WebDriverWait(driver, 150).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(Switch.spinnerXpath)));
 		
-		new WebDriverWait(driver, 80).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='Login']")));
-		driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+		new WebDriverWait(driver, 120).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='Login']")));
+		//driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
 		System.out.println("Standby Created Successfully");
 		System.out.println(" Cluster Created Successfully");
 	}

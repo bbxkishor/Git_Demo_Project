@@ -220,7 +220,7 @@ public class Thirdstage extends TestBase{
 		Thread.sleep(2000);
 		Windriver.switchTo().window((String)Windriver.getWindowHandles().toArray()[0]);
 		Thread.sleep(3000);
-		ramethods.RADisconnectConnection(Windriver);
+		//ramethods.RADisconnectConnection(Windriver);
 		Windriver.switchTo().window((String)Windriver.getWindowHandles().toArray()[0]);
 		Thread.sleep(2000);
 		closeApp();

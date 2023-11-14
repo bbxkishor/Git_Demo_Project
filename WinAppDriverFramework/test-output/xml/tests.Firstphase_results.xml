@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="winAppDriverFramework"
+           tests="46"
+           failures="0"
+           errors="0"
+           skipped="46"
+           time="0.000">
+  <properties />
+  
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="DeleteConnection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test24_AI0033_Password_alphaNumeric" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test23_AI0025a_AD_Password_Charac_Limit" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test22_AI0025a_Password_Charac_Limit" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test18_DC0001_Connection_of_ZeroUTx" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test04_CL0003_Active_User_check" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test19_SR0005_connection_Termination_After_privateCon" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test12_AI0005_User_Privileges_Check" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test14_AI0043_Select_Connection" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test08_AI0046_Version_BB_details_check" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test09_AI0047_Information_Tab" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test20_AI0038_Close_RA_Closes_AllCon" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test15_CL0006a_Active_multipleCon_windows" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test05_SR0021_RA_Authentication" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test02_CL0001_bxa_Manager_IP_Check" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test07_AI0004_Menu_Options_Check" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test10_VI0006_Resolution_Setto_Auto" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test16_DC0001_Connection_of_SETX" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test21_AI0048_Launch_Terminate_PopUp_Message" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test17_DC0001_Connection_of_PETX" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test11_AI0007_Connection_List_check" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test03_CL0002_bxaManager_IPsetUp" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test01_SR0018_HID_Absolute" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+            <testcase name="Test13_AI0032_User_Password_Update" time="0.0" classname="tests.Firstphase">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

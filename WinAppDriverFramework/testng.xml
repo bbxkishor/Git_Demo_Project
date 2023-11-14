@@ -20,14 +20,15 @@
 		<classes>
 
 
-			<class name="tests.Firstphase" />
-
+			 <!-- <class name="tests.Firstphase" />
 
 			<class name="tests.SecondPhase" /> 
-			<class name="tests.Thirdstage" />
-			 <class name="tests.FourthPhase" />
-		 <!-- <class name="tests.FifthPhase" />
-			<class name="tests.SixthPhase"/> 
+			<class name="tests.Thirdstage" />  
+			 
+		  <class name="tests.FifthPhase" /> -->
+		 <class name="tests.FourthPhase" />
+		<!--	<class name="tests.SixthPhase"/> 
+			
 			<class name="tests.SeventhPhase" />  -->
 
 

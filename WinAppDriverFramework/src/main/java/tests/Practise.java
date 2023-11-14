@@ -73,10 +73,22 @@ import pages.UserPage;
 import pages.boxillaElements;
 
 public class Practise extends TestBase{
+	public static void main(String args[])  
+	{  
+		int[] arr=getArray();           
+		for (int i = 0; i < arr.length; i++) 
+			System.out.print( arr[i]+ " ");     
+	}  
+	public static int[] getArray()  
+	{  
+		int[] arr={17,18,19,20,21};   
+		return arr;  
+	}  
 
-	@Test
+	//@Test
 	public void practiseCode() throws Exception
 	{
+		
 		
 		
 		DesiredCapabilities capabilities = new DesiredCapabilities();

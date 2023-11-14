@@ -219,7 +219,7 @@ public class ConnectionPage {
 	}
 
 	public static WebElement DisconnectConnection(WebDriver driver) {
-		element = driver.findElement(By.xpath("(.//span[@class='fa fa-times'])[1]"));
+		element = driver.findElement(By.xpath("(.//span[@class='fa fa-times'][1])"));
 		return element;
 	}
 
@@ -626,6 +626,7 @@ public static void launchSharedConnection(WebDriver driver, ArrayList<String> co
 		connections(driver).click();
 		ConnectionViewer(driver).click();
 		driver.navigate().refresh();
+		Thread.sleep(3000);
 		MakeConnection(driver).click();
 		Thread.sleep(3000);
 		InputID(driver).sendKeys(connection);
@@ -655,6 +656,7 @@ public static void BreakboxillaConnection(WebDriver driver) throws InterruptedEx
 	driver.navigate().refresh();
 	Thread.sleep(5000);
 	DisconnectConnection(driver).click();
+	Thread.sleep(5000);
 	/*//To check if any connections are active
 		if(DisconnectConnection(driver).isDisplayed())
 		{

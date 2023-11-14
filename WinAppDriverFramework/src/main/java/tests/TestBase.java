@@ -65,6 +65,7 @@ import methods.SystemMethods;
 import methods.UserMethods;
 import pages.BoxillaHeaders;
 import pages.ClusterPage;
+import pages.ConnectionPage;
 import pages.LandingPage;
 import pages.UserPage;
 import pages.boxillaElements;
@@ -117,7 +118,7 @@ public class TestBase extends RESTStatistics {
 	public static String MasterNodeName;
 	public static String StandbyNodeID;
 	public static String StandbyNodeName;
-	
+
 	public static String RecieverName;
 
 	//For Size and Position declaring Values
@@ -164,12 +165,12 @@ public class TestBase extends RESTStatistics {
 		StandbyNodeID=prop.getProperty("StandbyNodeID");
 		StandbyNodeName=prop.getProperty("StandbyNodeName");
 		RecieverName=prop.getProperty("RecieverName");
-		
-		
+
+
 		System.out.println("loaded username is "+boxillaUsername);
 		System.out.println("loaded password is "+boxillaPassword);
 		System.out.println("VMIP is  "+VMIp);
-		
+
 		startTime = System.currentTimeMillis();
 		Thread.sleep(2000);
 
@@ -715,19 +716,19 @@ public class TestBase extends RESTStatistics {
 
 			LandingPage.logoutbtn(firedrive).click();
 			firedrive.quit();
-			
+
 
 		} catch (Exception e) {
 			// TODO: handle exception
 			firedrive.quit();
 		}
-		
+
 		long endTime = System.currentTimeMillis();
 		long duration = endTime - startTime;
 		System.out.println("Regression running for : " + getTimeFromMilliSeconds(duration));
 		long singleTestTime = endTime - splitTime;
 		System.out.println(result.getName() + " took : " + getTimeFromMilliSeconds(singleTestTime));
-		
+
 		printTestDetails("FINISHING", result.getName(), results);
 		System.out.println("Tests Completed:" + ++testCounter);
 	}
@@ -775,17 +776,32 @@ public class TestBase extends RESTStatistics {
 	@BeforeMethod
 	public void DeleteConnection() throws InterruptedException {     
 
-		RestAssured.useRelaxedHTTPSValidation();
+		try {
+			RestAssured.useRelaxedHTTPSValidation();
 
-		String response = given().auth().preemptive().basic(AutomationUsername, AutomationPassword).headers(BoxillaHeaders.getBoxillaHeaders())
-				.when().contentType(ContentType.JSON)
-				.delete("https://" + boxillaManager + "/bxa-api/connections/kvm/all")
-				.then().assertThat().statusCode(200)
-				.extract().response().asString();  
+			String response = given().auth().preemptive().basic(AutomationUsername, AutomationPassword).headers(BoxillaHeaders.getBoxillaHeaders())
+					.when().contentType(ContentType.JSON)
+					.delete("https://" + boxillaManager + "/bxa-api/connections/kvm/all")
+					.then().extract().response().asString();  
 
 
-		System.out.println("Connection Delete status"+response);
-		
+			System.out.println("Connection Delete status"+response);
+
+			Thread.sleep(2000);
+			if(response.contains("200"))
+			{System.out.println(" ");}
+			else{
+				Thread.sleep(2000);
+				cleanUpLogin();
+				ConnectionPage.BreakboxillaConnection(firedrive);
+				cleanUpLogout();
+			} 
+		}
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		splitTime = System.currentTimeMillis();
 	}
 	public void createAndValidateADUser() throws Exception

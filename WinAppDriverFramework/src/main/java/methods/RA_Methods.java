@@ -1,7 +1,10 @@
 package methods;
 
-import static io.restassured.RestAssured.given; 
+import static io.restassured.RestAssured.given;
 
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -17,6 +20,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+
+import javax.swing.JOptionPane;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -332,7 +337,21 @@ public class RA_Methods {
 		{
 			System.out.println("Text not found");
 		}
+		
+		//String str = text.getText();
+		Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
+	    StringSelection strSel = new StringSelection(text);
 
+	    cb.setContents(strSel, null);
+		/*
+		 * Clipboard clip = Toolkit.getDefaultToolkit() .getSystemClipboard();
+		 * StringSelection strse1 = new StringSelection(text); clip.setContents(strse1,
+		 * strse1); JOptionPane.showMessageDialog(null,"TEXTS ARE COPIED!");
+		 */
+        
+        //Actions action = new Actions(driver);
+        //Thread.sleep(100);
+        //action.sendKeys(Keys.chord(Keys.ENTER)).build().perform();
 		/*action.sendKeys(Keys.chord(Keys.CONTROL,"a")).build().perform();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		action.sendKeys(Keys.chord(Keys.CONTROL,"c")).build().perform();
@@ -492,7 +511,7 @@ public class RA_Methods {
 
 
 		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setCapability("app", "C:\\Program Files\\teraterm\\ttermpro.exe");
+		capability.setCapability("app", "C:\\Program Files (x86)\\teraterm\\ttermpro.exe");
 		try {
 
 			driver = new WindowsDriver(new URL("http://127.0.0.1:4723"), capability);

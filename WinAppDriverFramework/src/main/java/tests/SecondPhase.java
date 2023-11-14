@@ -94,7 +94,7 @@ public class SecondPhase extends TestBase{
 		ramethods.RAConnectionLaunch(Windriver);
 
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			WebElement windowsPopupOpenButton =Windriver.findElementByName("Unable to connect");
 			String text= windowsPopupOpenButton.getText();
 			Windriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); 
@@ -214,7 +214,7 @@ public class SecondPhase extends TestBase{
 	}
 
 
-@Test(priority=-5)// manage TX and Rx, launch a connection through boxilla and note down the FPS then launch connection through RA and measure the FPS
+@Test(priority=5)// manage TX and Rx, launch a connection through boxilla and note down the FPS then launch connection through RA and measure the FPS
 public void Test05_FPS_Performance_in_RA_and_RX() throws Exception {
 
 	printTestDetails("STARTING ", "Test05__FPS_Performance_in_RA_and_RX", "");
@@ -516,11 +516,12 @@ public void Test_07_SR0004_Private_Violation() throws Exception {
 			doubleClick().
 			build().perform();
 			if(count==2) {
-				Thread.sleep(30000);
+				Thread.sleep(4000);
 				new WebDriverWait(Windriver, 60).until(ExpectedConditions.visibilityOf(Windriver.findElementByAccessibilityId("TitleBar")));
 				WebElement windowsPopupOpenButton = Windriver.findElementByAccessibilityId("TitleBar");
 				String text= windowsPopupOpenButton.getText();
 				System.out.println("Message is "+text);
+				Thread.sleep(20000);
 				break;
 			}
 			System.out.println(connectionsharedName+" has been launched");

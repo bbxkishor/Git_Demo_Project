@@ -45,6 +45,9 @@ import pages.boxillaElements;
 
 public class Firstphase extends TestBase{
 
+	
+	
+	//new line added
 	final static Logger log = Logger.getLogger(Firstphase.class);
 	UserPage userpage = new UserPage();
 
@@ -766,7 +769,7 @@ public class Firstphase extends TestBase{
 				doubleClick().
 				build().perform();
 				if(count==2) {
-					Thread.sleep(2000);
+					Thread.sleep(4000);
 					new WebDriverWait(Windriver, 60).until(ExpectedConditions.visibilityOf(Windriver.findElementByAccessibilityId("TitleBar")));
 					WebElement windowsPopupOpenButton = Windriver.findElementByAccessibilityId("TitleBar");
 					String text= windowsPopupOpenButton.getText();
@@ -866,22 +869,25 @@ public class Firstphase extends TestBase{
 			}
 			System.out.println("Launching connection");
 			Actions a = new Actions(Windriver);
-			WebElement targetConnection = availableConnectionsList.findElement(By.name(connectionPEList.get(1)));
+			WebElement targetConnection = availableConnectionsList.findElement(By.name(connectionPEList.get(0)));
 			a.moveToElement(targetConnection).
 			doubleClick().
 			build().perform();
+			Thread.sleep(4000);
 			new WebDriverWait(Windriver, 60).until(ExpectedConditions.visibilityOf(Windriver.findElementByAccessibilityId("TitleBar")));
 			WebElement windowsPopupconnection =  Windriver.findElementByAccessibilityId("TitleBar");
 			String ConnectionText= windowsPopupconnection.getText();//
 			System.out.println("Pop Message for starting a connection - "+ConnectionText);
 			Thread.sleep(20000);
 
-			Windriver.switchTo().window((String)Windriver.getWindowHandles().toArray()[0]);
-			Windriver.findElement(By.name(connectionPEList.get(1))).click();
-			Windriver.findElement(By.name("Disconnect")).click();
-			WebElement windowsPopupDisconnect =  Windriver.findElementByAccessibilityId("TitleBar");
-			String Disconnecttext= windowsPopupDisconnect.getText();
-			System.out.println(Disconnecttext);
+			/*
+			 * Windriver.switchTo().window((String)Windriver.getWindowHandles().toArray()[0]
+			 * ); Windriver.findElement(By.name(connectionPEList.get(0))).click();
+			 * Windriver.findElement(By.name("Disconnect")).click(); WebElement
+			 * windowsPopupDisconnect = Windriver.findElementByAccessibilityId("TitleBar");
+			 * String Disconnecttext= windowsPopupDisconnect.getText();
+			 * System.out.println(Disconnecttext);
+			 */
 			Thread.sleep(5000);
 			Windriver.switchTo().window((String)Windriver.getWindowHandles().toArray()[0]);
 			closeApp();

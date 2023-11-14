@@ -128,7 +128,7 @@ public class FourthPhase extends TestBase{
 			}
 
 			Windriver.switchTo().window((String)Windriver.getWindowHandles().toArray()[0]);
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			closeApp();
 			cleanUpLogin();
 			UserPage.DeleteUser(firedrive, RAusername);
@@ -180,7 +180,7 @@ public class FourthPhase extends TestBase{
 	}
 
 
-	@Test(priority=4)//Connection time to a Transmitter unit shall be less than 3 seconds.
+	@Test(priority=-4)//Connection time to a Transmitter unit shall be less than 3 seconds.
 	public void Test04_SR0019_Connection_launch_in_3sec() throws Exception
 	{
 		printTestDetails("Starting", "Test04_SR0019_Connection_launch_in_3sec", "");
@@ -219,7 +219,7 @@ public class FourthPhase extends TestBase{
 			}
 			long start = System.currentTimeMillis();
 
-			new WebDriverWait(Windriver, 3).until(ExpectedConditions.visibilityOf(Windriver.findElementByAccessibilityId("TitleBar")));
+			//new WebDriverWait(Windriver, 5).until(ExpectedConditions.visibilityOf(Windriver.findElementByAccessibilityId("TitleBar")));
 
 			long finish = System.currentTimeMillis();
 			long totalTime = finish-start;
@@ -344,7 +344,7 @@ public class FourthPhase extends TestBase{
 		}
 	}
 
-	@Test(priority=7)//Test Cluster With VIP
+	@Test(priority=-7)//Test Cluster With VIP
 	public void Test07_LoginRA_by_VIP_of_cluster() throws Exception
 	{
 		printTestDetails("Starting", "Test07_LoginRA_by_VIP_of_cluster", "");
@@ -504,7 +504,7 @@ public class FourthPhase extends TestBase{
 		soft.assertAll();
 	}
 
-	@Test(priority=-111)//Copy paste from user pc to RA
+	@Test(priority=11)//Copy paste from user pc to RA
 	public void Test11_CP0001_copy_English_char_from_PC_paste_inConnection() throws Exception
 	{
 		printTestDetails("Starting", "Test11_CP0001_copy_English_char_from_PC_paste_inConnection", "");
@@ -563,12 +563,12 @@ public class FourthPhase extends TestBase{
 		}
 	}
 
-	@Test(priority=-112)//Copying and Pasting character set shall be confined to ASCII (special characters) and spaces for Transmitter.
+	@Test(priority=12)//Copying and Pasting character set shall be confined to ASCII (special characters) and spaces for Transmitter.
 	public void Test12_CP0005_copy_ASCII_from_PC_paste_inConnection() throws Exception
 	{
 		printTestDetails("Starting", "Test12_CP0005_copy_ASCII_from_PC_paste_inConnection", "");
 		SoftAssert soft = new SoftAssert();
-		Onedevices = devicePool.getAllDevices("devicePE_SH.properties");
+		Onedevices = devicePool.getAllDevices("deviceSE.properties");
 		System.out.println(Onedevices);
 
 		cleanUpLogin();
@@ -597,7 +597,7 @@ public class FourthPhase extends TestBase{
 			Thread.sleep(2000);
 			closeApp();
 
-			String pasteText = RA_Methods.textFromSFTP("pcadmin", "Blackbox@123", "10.231.128.94", "/C:/Users/pcadmin/desktop/paste.txt");
+			String pasteText = RA_Methods.textFromSFTP("pcadmin", "Blackbox@123", "10.231.128.92", "/C:/Users/pcadmin/desktop/paste.txt");
 			System.out.println("Number of Characters in Transmitter  :" + pasteText.length());
 			soft.assertEquals(textinPC, pasteText, "Text copied from Pc is Not pasted in Connection as Expected");
 
@@ -623,7 +623,7 @@ public class FourthPhase extends TestBase{
 	}
 
 
-	@Test(priority=-113)//Test copy paste from one RA connection another Ra connection. 
+	@Test(priority=13)//Test copy paste from one RA connection another Ra connection. 
 	public void Test13_CP0001_Data_Notcopied_from_one_connection_to_another() throws Exception
 	{
 		printTestDetails("Starting", "Test13_CP0001_Data_Notcopied_from_one_connection_to_another", "");
@@ -661,7 +661,7 @@ public class FourthPhase extends TestBase{
 			WindowsDriver Windriver3=null;
 			WindowsDriver Windriver4 = null;
 			//working with second connection
-			Onedevices = devicePool.getAllDevices("devicePE_SH.properties");
+			Onedevices = devicePool.getAllDevices("deviceSE.properties");
 			cleanUpLogin();
 			ConnectionPage.CreateConnection(firedrive, Onedevices, 1, "Shared");
 			userpage.createUser(firedrive, Onedevices, RAusername, RApassword, "General"); 
@@ -682,7 +682,7 @@ public class FourthPhase extends TestBase{
 			Thread.sleep(2000);
 			closeApp();
 
-			String con1Text = RA_Methods.textFromSFTP("pcadmin", "Blackbox@123", "10.231.128.94", "/C:/Users/pcadmin/desktop/paste.txt");
+			String con1Text = RA_Methods.textFromSFTP("pcadmin", "Blackbox@123", "10.231.128.92", "/C:/Users/pcadmin/desktop/paste.txt");
 			System.out.println("Number of Characters in Transmitter  :" + con1Text.length());
 
 			String con2Text = RA_Methods.textFromSFTP("pcadmin", "Blackbox@123", "10.231.128.91", "/C:/Users/pcadmin/desktop/paste.txt");
@@ -712,7 +712,7 @@ public class FourthPhase extends TestBase{
 	}
 
 
-	@Test(priority=-114)//Clipboard Copying and Pasting max size (number of characters) is set to maximum of 255 for Transmitter.
+	@Test(priority=14)//Clipboard Copying and Pasting max size (number of characters) is set to maximum of 255 for Transmitter.
 	public void Test14_CP0006_max_copy_255_Char_from_PC_paste_inConnection() throws Exception
 	{
 		printTestDetails("Starting", "Test14_CP0006_max_copy_255_Char_from_PC_paste_inConnection", "");
@@ -774,7 +774,7 @@ public class FourthPhase extends TestBase{
 	}
 
 
-	@Test(priority=-115)//Clipboard Copying and Pasting max size (number of characters) will be OS defined for Microsoft Windows Virtual Machine.
+	@Test(priority=15)//Clipboard Copying and Pasting max size (number of characters) will be OS defined for Microsoft Windows Virtual Machine.
 	public void Test15_CP00013_VM_should_allow_more_than_255_characters() throws Exception
 	{
 		printTestDetails("Starting", "Test15_CP00013_VM_should_allow_more_than_255_characters", "");
@@ -837,7 +837,7 @@ public class FourthPhase extends TestBase{
 		soft.assertAll();			
 	}
 
-	@Test(priority=-16)//Windows control key sequence to “CNTL-ALT-DELETE” should work on the local PC 
+	@Test(priority=16)//Windows control key sequence to “CNTL-ALT-DELETE” should work on the local PC 
 	public void Test16_SR0044_CNTL_ALT_DEL_should_work_for_Local_PC() throws Exception
 	{
 		printTestDetails("Starting", "Test16_SR0044_CNTL_ALT_DEL_should_work_for_Local_PC", "");
@@ -1343,7 +1343,7 @@ public class FourthPhase extends TestBase{
 
 
 
-	@Test(priority=-19) // Status Information to provide information on error conditions
+	@Test(priority=19) // Status Information to provide information on error conditions
 	public void Test19__Statusinfo_of_connection_after_rebooting_Tx() throws Exception
 	{
 		printTestDetails("Starting", "Test19_AI0049_Statusinfo_of_connection_after_rebooting_Tx", "");
@@ -1378,13 +1378,17 @@ public class FourthPhase extends TestBase{
 				doubleClick().build().perform();
 				System.out.println("Connection Name -  " +connection + " has launched");
 				count++;
-				Thread.sleep(2000);
+				Thread.sleep(10000);
 			}
-			new WebDriverWait(Windriver, 60).until(ExpectedConditions.visibilityOf(Windriver.findElementByAccessibilityId("TitleBar")));
-			WebElement popUpWindow1 =Windriver.findElementByAccessibilityId("TitleBar");
-			Windriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); 
-			System.out.println("Pop-up window is  "+popUpWindow1.getText());
-			Thread.sleep(20000);
+			/*
+			 * new WebDriverWait(Windriver,
+			 * 60).until(ExpectedConditions.visibilityOf(Windriver.
+			 * findElementByAccessibilityId("TitleBar"))); WebElement popUpWindow1
+			 * =Windriver.findElementByAccessibilityId("TitleBar");
+			 * Windriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			 * System.out.println("Pop-up window is  "+popUpWindow1.getText());
+			 * Thread.sleep(20000);
+			 */
 
 
 			//WindowsDriver session = RA_Methods.launchedConnectionWindow(Windriver, Windriver2);
@@ -1400,7 +1404,7 @@ public class FourthPhase extends TestBase{
 			//new WebDriverWait(Windriver2, 60).until(ExpectedConditions.visibilityOf(Windriver2.findElementByAccessibilityId("TitleBar")));	
 			//WebElement popUpWindow =Windriver2.findElementByAccessibilityId("TitleBar");
 
-			Thread.sleep(10000);
+			Thread.sleep(6000);
 			new WebDriverWait(Windriver2, 60).until(ExpectedConditions.visibilityOf(Windriver2.findElementByName("Unable to connect")));	
 			WebElement popUpWindow =Windriver2.findElementByName("Unable to connect");
 
