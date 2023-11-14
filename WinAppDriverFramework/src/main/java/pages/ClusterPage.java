@@ -171,6 +171,7 @@ public class ClusterPage {
 
 	public void createStandByCluster(WebDriver driver, String masterip, String standbynodeid, String standbynodename )
 	{
+		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		System.out.println("StandBy Boxilla URL is  " + driver.getCurrentUrl());
 		cluster(driver).click();
